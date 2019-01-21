@@ -1,0 +1,154 @@
+<div class="container m-5">
+    <h2>Tablica kalorija i namirnica</h2>
+    <p>U ovoj tablici se nalaze dnevni unosi kalobija i namirnica </p>
+
+    <div class="row">
+        <div class="col-md-3">
+            <input class="form-control" placeholder="Pretraga namirnica" type="text" name="query" [(ngModel)]="query">
+        </div>
+    </div>
+
+
+    <ul class="nav nav-pills">
+        <li class="active nav-item"><a data-toggle="pill" href="#home"
+                                       style="margin-right: 10px; text-decoration: none; color: red; margin-bottom: 5px">Dnevno</a>
+        </li>
+        <li><a class="nav-item" data-toggle="pill" href="#menu1"
+               style="margin-right: 10px; text-decoration: none; color: red">Nedeljno</a></li>
+        <li><a class="nav-item" data-toggle="pill" href="#menu2"
+               style="margin-right: 10px; text-decoration: none; color: red">Mesecno </a></li>
+    </ul>
+
+
+    <div class="tab-content">
+        <div id="home" class="tab-pane fade in active">
+            <h3> DNEVNO </h3>
+
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>Ime namirnice</th>
+                    <th>Kalorijska vrednost</th>
+                    <th>Datum</th>
+                    <th>Vreme</th>
+                    <th>Brisanje unosa</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let zapis of dnevnik | SearchPipe:'ime_namirnice':query">
+                    <td class="text-success">{{zapis.ime_namirnice}}</td>
+                    <td class="text-success">{{zapis.vrednost}}</td>
+                    <td class="text-success">{{zapis.datum}}</td>
+                    <td class="text-success">{{zapis.vreme}}</td>
+                    <td class="text-success">
+                        <button class="btn btn-outline-danger" (click)="obirsi_unos(zapis.id_kalorije)">Obrisi unos
+                        </button>
+                    </td>
+                </tr>
+                <tr style="color: blue">Trenutni unos kalorija: {{dnevno}} kcl</tr>
+                </tbody>
+            </table>
+            <table>
+                <tr>
+                    <td style="width: 1400px;height: 100%;">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <canvas id="lineChart"></canvas>
+                            </div>
+                            <div class="col-md-6">
+                                <canvas id="lineChartDnevno"></canvas>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="menu1" class="tab-pane fade">
+            <h3> Nedeljno </h3>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>Ime namirnice</th>
+                    <th>Kalorijska vrednost</th>
+                    <th>Datum</th>
+                    <th>Vreme</th>
+                    <th>Brisanje unosa</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let zapis of dnevnik7 | SearchPipe:'ime_namirnice':query">
+                    <td class="text-success">{{zapis.ime_namirnice}}</td>
+                    <td class="text-success">{{zapis.vrednost}}</td>
+                    <td class="text-success">{{zapis.datum}}</td>
+                    <td class="text-success">{{zapis.vreme}}</td>
+                    <td class="text-success">
+                        <button class="btn btn-outline-danger" (click)="obirsi_unos(zapis.id_kalorije)">Obrisi unos
+                        </button>
+                    </td>
+                </tr>
+
+                <tr style="color: blue">Trenutni unos kalorija: {{dnevno7}} kcl</tr>
+
+                </tbody>
+            </table>
+            <table>
+                <tr>
+                    <td style="width: 1400px;height: 100%;">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <canvas id="lineChart7"></canvas>
+                            </div>
+                            <div class="col-md-6">
+                                <canvas id="lineChartNedeljno"></canvas>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="menu2" class="tab-pane fade">
+            <h3> Mesecno </h3>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>Ime namirnice</th>
+                    <th>Kalorijska vrednost</th>
+                    <th>Datum</th>
+                    <th>Vreme</th>
+                    <th>Brisanje unosa</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let zapis of dnevnik30 | SearchPipe:'ime_namirnice':query">
+                    <td class="text-success">{{zapis.ime_namirnice}}</td>
+                    <td class="text-success">{{zapis.vrednost}}</td>
+                    <td class="text-success">{{zapis.datum}}</td>
+                    <td class="text-success">{{zapis.vreme}}</td>
+                    <td class="text-success">
+                        <button class="btn btn-outline-danger" (click)="obirsi_unos(zapis.id_kalorije)">Obrisi unos
+                        </button>
+                    </td>
+                </tr>
+
+                <tr style="color: blue">Trenutni unos kalorija: {{dnevno30}} kcl</tr>
+                </tbody>
+            </table>
+            <table>
+                <tr>
+                    <td style="width: 1400px;height: 100%;">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <canvas id="lineChart30"></canvas>
+                            </div>
+                            <div class="col-md-6">
+                                <canvas id="lineChartMesecno"></canvas>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+
+</div>

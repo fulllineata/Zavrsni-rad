@@ -1,0 +1,25 @@
+<div class="container m-5">
+  <h2>Korisnici</h2>
+  <p>U ovoj tabeli se nalazi spisak korisnika</p>
+  <table class="table">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Ime</th>
+      <th>Prezime</th>
+      <th>Korisnicko ime</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let korisnik of korisnici">
+      <td class="text-info" >{{korisnik.id}}</td>
+      <td class="text-info" >{{korisnik.firstname}}</td>
+      <td class="text-info" >{{korisnik.lastname}}</td>
+      <td class="text-info" >{{korisnik.username}}</td>
+      <td class="text-info" >
+        <button class="btn btn-outline-danger" (click)="obrisi_korinsika(korisnik.id)">Obrisi korinsika</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>

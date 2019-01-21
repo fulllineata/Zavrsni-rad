@@ -1,0 +1,16 @@
+<div class="container mt-4 p-4" style="border-radius: 5px;">
+    <form role="form" [formGroup]="loginForm">
+      <div class="alert alert-danger" style="display: none;">
+
+      </div>
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" class="form-control" formControlName='username'>
+      </div>
+      <div class="form-group">
+        <label for="pwd">Password:</label>
+        <input type="password" class="form-control" formControlName='password'>
+      </div>
+      <button (click)="login()" class="btn btn-primary">Login</button>
+    </form>
+  </div>

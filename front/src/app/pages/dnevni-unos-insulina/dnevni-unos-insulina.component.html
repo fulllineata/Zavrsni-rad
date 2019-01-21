@@ -1,0 +1,27 @@
+<div class="container my-5 p-3 " style="border-radius: 5px;">
+
+  <h1>Unos insulina</h1>
+  <form role="form" [formGroup]="dnevniUnosInsulinaForm">
+    <div class="alert alert-danger" style="display: none;"></div>
+
+    <div class="form-group">
+      <label for="vrstaInsulina">Tip insulina</label>
+      <select class="form-control" formControlName="vrstaInsulina" required>
+        <option *ngFor="let tipInsulina of tipoviInsulina" [value]="tipInsulina">{{tipInsulina}}</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <input placeholder="Vrednost insulina" type="number" class="form-control" formControlName='vrednostInsulina' required>
+    </div>
+
+    <div class="form-group">
+      <label for="vremeDatumUnosa">Datum i vreme unosa</label>
+      <input type="datetime-local" class="form-control" formControlName='vremeDatumUnosa' required>
+    </div>
+
+    <button (click)="dnevni_unos_insulina()" class="btn btn-primary float-right">Unesi</button>
+  </form>
+
+
+</div>

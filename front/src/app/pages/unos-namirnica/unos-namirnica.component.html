@@ -1,0 +1,1592 @@
+<div class="container mt-4 p-4" style="border-radius: 5px;">
+
+    <form role="form" [formGroup]="unosKalorijaForm">
+        <div class="alert alert-danger" style="display: none;"></div>
+
+        <div class="row">
+            <div class="form-group col-md-6">
+                <label for="imeNamirnice">Ime namirnice</label>
+                <input type="text" class="form-control" formControlName='imeNamirnice'
+                       placeholder="ime namirnice"
+                       required>
+                <!--<input type="text" class="form-control" formControlName='imeNamirnice' required>-->
+
+            </div>
+
+            <div class="form-group col-md-6">
+                <label for="kalorijskaVrednost">Kalorijska vrednost</label>
+                <input type="number" class="form-control" formControlName='kalorijskaVrednost'
+                       placeholder="broj kalorija"
+                       required>
+            </div>
+
+
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <button (click)="unos_kalorija()" class="btn btn-primary float-right">Unesi</button>
+            </div>
+        </div>
+    </form>
+    <div class="row">
+        <div class="col-md-12">
+
+            <p>
+                <a class="btn btn-primary mr-1" data-toggle="collapse" href="#multiCollapseExample1" role="button"
+                   aria-expanded="false"
+                   aria-controls="multiCollapseExample1">Meso i mesni proizvodi</a>
+                <button class="btn btn-primary mr-1" type="button" data-toggle="collapse"
+                        data-target="#multiCollapseExample2"
+                        aria-expanded="false" aria-controls="multiCollapseExample2">Riba
+                </button>
+                <button class="btn btn-primary mr-1" type="button" data-toggle="collapse"
+                        data-target="#multiCollapseExample3"
+                        aria-expanded="false" aria-controls="multiCollapseExample3">Mleko i mlečne preradjevine
+                </button>
+                <button class="btn btn-primary mr-1" type="button" data-toggle="collapse"
+                        data-target="#multiCollapseExample4"
+                        aria-expanded="false" aria-controls="multiCollapseExample4">Žitarice
+                </button>
+                <button class="btn btn-primary mr-1" type="button" data-toggle="collapse"
+                        data-target="#multiCollapseExample5"
+                        aria-expanded="false" aria-controls="multiCollapseExample5">Povrće
+                </button>
+                <button class="btn btn-primary mr-1" type="button" data-toggle="collapse"
+                        data-target="#multiCollapseExample6"
+                        aria-expanded="false" aria-controls="multiCollapseExample6">Voće
+                </button>
+            </p>
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <div class="collapse multi-collapse" id="multiCollapseExample1">
+                <div class="card card-body">
+                    <table>
+                        <tbody>
+                        <tr>
+                            <th colspan="5">MESO I MESNE PRERAĐEVINE</th>
+                        </tr>
+                        <tr>
+                            <th>Hrana</th>
+                            <th>Kalorije</th>
+                            <th>Proteini</th>
+                            <th>Ugljeni hidrati</th>
+                            <th>Masti</th>
+                        </tr>
+                        <tr>
+                            <td>Bubrezi (teleći)</td>
+                            <td>121</td>
+                            <td>15</td>
+                            <td>1</td>
+                            <td>6</td>
+                        </tr>
+                        <tr>
+                            <td>Dimljeni kare</td>
+                            <td>272</td>
+                            <td>24</td>
+                            <td>2</td>
+                            <td>16</td>
+                        </tr>
+                        <tr>
+                            <td>Divlja svinja</td>
+                            <td>104</td>
+                            <td>21</td>
+                            <td>0</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>Govedina mršava</td>
+                            <td>119</td>
+                            <td>21</td>
+                            <td>4</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Govedina srednje masna</td>
+                            <td>155</td>
+                            <td>20</td>
+                            <td>1</td>
+                            <td>8</td>
+                        </tr>
+                        <tr>
+                            <td>Govedina masna</td>
+                            <td>307</td>
+                            <td>19</td>
+                            <td>1</td>
+                            <td>25</td>
+                        </tr>
+                        <tr>
+                            <td>Govedina jako masna</td>
+                            <td>410</td>
+                            <td>14</td>
+                            <td>0</td>
+                            <td>39</td>
+                        </tr>
+                        <tr>
+                            <td>Govedina u konzervi</td>
+                            <td>223</td>
+                            <td>26</td>
+                            <td>0</td>
+                            <td>14</td>
+                        </tr>
+                        <tr>
+                            <td>Goveđi file</td>
+                            <td>138</td>
+                            <td>16</td>
+                            <td>0</td>
+                            <td>8</td>
+                        </tr>
+                        <tr>
+                            <td>Goveđe meso za gulaš</td>
+                            <td>155</td>
+                            <td>21</td>
+                            <td>0</td>
+                            <td>8</td>
+                        </tr>
+                        <tr>
+                            <td>Goveđe meso za rolade</td>
+                            <td>121</td>
+                            <td>20</td>
+                            <td>2</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>Goveđe meso za juhu</td>
+                            <td>223</td>
+                            <td>19</td>
+                            <td>0</td>
+                            <td>17</td>
+                        </tr>
+                        <tr>
+                            <td>Goveđa jetra</td>
+                            <td>121</td>
+                            <td>20</td>
+                            <td>2</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>Hrenovke (govedina + svinjetina)</td>
+                            <td>320</td>
+                            <td>11</td>
+                            <td>2</td>
+                            <td>29</td>
+                        </tr>
+                        <tr>
+                            <td>Hrenovke (pileće)</td>
+                            <td>258</td>
+                            <td>13</td>
+                            <td>7</td>
+                            <td>20</td>
+                        </tr>
+                        <tr>
+                            <td>Hladetina</td>
+                            <td>239</td>
+                            <td>43</td>
+                            <td>1</td>
+                            <td>7</td>
+                        </tr>
+                        <tr>
+                            <td>Janjeći kotlet</td>
+                            <td>348</td>
+                            <td>19</td>
+                            <td>0</td>
+                            <td>17</td>
+                        </tr>
+                        <tr>
+                            <td>Janjetina mršava</td>
+                            <td>207</td>
+                            <td>19</td>
+                            <td>0</td>
+                            <td>13</td>
+                        </tr>
+                        <tr>
+                            <td>Janjetina srednje masna</td>
+                            <td>250</td>
+                            <td>18</td>
+                            <td>0</td>
+                            <td>18</td>
+                        </tr>
+                        <tr>
+                            <td>Janjetina masna (prsa)</td>
+                            <td>404</td>
+                            <td>12</td>
+                            <td>0</td>
+                            <td>37</td>
+                        </tr>
+                        <tr>
+                            <td>Jetrena pašteta</td>
+                            <td>440</td>
+                            <td>12</td>
+                            <td>1</td>
+                            <td>40</td>
+                        </tr>
+                        <tr>
+                            <td>Kobasica (prosječno)</td>
+                            <td>324</td>
+                            <td>11</td>
+                            <td>1</td>
+                            <td>30</td>
+                        </tr>
+                        <tr>
+                            <td>Konjetina</td>
+                            <td>98</td>
+                            <td>18</td>
+                            <td>1</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>Krvavice</td>
+                            <td>424</td>
+                            <td>13</td>
+                            <td>0</td>
+                            <td>39</td>
+                        </tr>
+                        <tr>
+                            <td>Kunić</td>
+                            <td>135</td>
+                            <td>18</td>
+                            <td>0</td>
+                            <td>7</td>
+                        </tr>
+                        <tr>
+                            <td>Mesni narezak</td>
+                            <td>424</td>
+                            <td>12</td>
+                            <td>4</td>
+                            <td>40</td>
+                        </tr>
+                        <tr>
+                            <td>Mješano meso, mljeveno</td>
+                            <td>253</td>
+                            <td>20</td>
+                            <td>0</td>
+                            <td>19</td>
+                        </tr>
+                        <tr>
+                            <td>Ovčetina</td>
+                            <td>246</td>
+                            <td>13</td>
+                            <td>0</td>
+                            <td>24</td>
+                        </tr>
+                        <tr>
+                            <td>Pačetina</td>
+                            <td>227</td>
+                            <td>21</td>
+                            <td>0</td>
+                            <td>8</td>
+                        </tr>
+                        <tr>
+                            <td>Piletina</td>
+                            <td>123</td>
+                            <td>21</td>
+                            <td>12</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>Pileća prsa, bez kože</td>
+                            <td>110</td>
+                            <td>23</td>
+                            <td>0</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Pileći batak bez kože</td>
+                            <td>119</td>
+                            <td>21</td>
+                            <td>0</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>Pileći batak s kožom</td>
+                            <td>161</td>
+                            <td>20</td>
+                            <td>0</td>
+                            <td>9</td>
+                        </tr>
+                        <tr>
+                            <td>Pureća prsa</td>
+                            <td>111</td>
+                            <td>25</td>
+                            <td>0</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Pureća/pileća šunka</td>
+                            <td>128</td>
+                            <td>19</td>
+                            <td>0</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>Svinjska lopatica</td>
+                            <td>269</td>
+                            <td>19</td>
+                            <td>0</td>
+                            <td>23</td>
+                        </tr>
+                        <tr>
+                            <td>Salama, goveđa</td>
+                            <td>140</td>
+                            <td>20</td>
+                            <td>0</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>Salama, mortadela</td>
+                            <td>550</td>
+                            <td>18</td>
+                            <td>0</td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <td>Salama, parizer</td>
+                            <td>523</td>
+                            <td>17</td>
+                            <td>1</td>
+                            <td>47</td>
+                        </tr>
+                        <tr>
+                            <td>Salama, pureća/pileća prsa</td>
+                            <td>197</td>
+                            <td>16</td>
+                            <td>1</td>
+                            <td>14</td>
+                        </tr>
+                        <tr>
+                            <td>Slanina</td>
+                            <td>605</td>
+                            <td>8</td>
+                            <td>0</td>
+                            <td>60</td>
+                        </tr>
+                        <tr>
+                            <td>Srentina</td>
+                            <td>123</td>
+                            <td>21</td>
+                            <td>0</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>Svinjetina</td>
+                            <td>345</td>
+                            <td>18</td>
+                            <td>0</td>
+                            <td>27</td>
+                        </tr>
+                        <tr>
+                            <td>Svinjska pečenka</td>
+                            <td>342</td>
+                            <td>13</td>
+                            <td>0</td>
+                            <td>32</td>
+                        </tr>
+                        <tr>
+                            <td>Svinjska pljeskavica</td>
+                            <td>342</td>
+                            <td>14</td>
+                            <td>2</td>
+                            <td>31</td>
+                        </tr>
+                        <tr>
+                            <td>Svinjska šnicla</td>
+                            <td>109</td>
+                            <td>22</td>
+                            <td>0</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>Svinjski file</td>
+                            <td>120</td>
+                            <td>21</td>
+                            <td>0</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>Svinjski kare</td>
+                            <td>132</td>
+                            <td>22</td>
+                            <td>0</td>
+                            <td>6</td>
+                        </tr>
+                        <tr>
+                            <td>Svinjski kotlet bez kosti</td>
+                            <td>117</td>
+                            <td>23</td>
+                            <td>0</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>Špek</td>
+                            <td>620</td>
+                            <td>8</td>
+                            <td>0</td>
+                            <td>64</td>
+                        </tr>
+                        <tr>
+                            <td>Šunka</td>
+                            <td>147</td>
+                            <td>23</td>
+                            <td>0</td>
+                            <td>6</td>
+                        </tr>
+                        <tr>
+                            <td>Šunka dimljena, pršut</td>
+                            <td>385</td>
+                            <td>18</td>
+                            <td>0</td>
+                            <td>33</td>
+                        </tr>
+                        <tr>
+                            <td>Šunka kuhana</td>
+                            <td>274</td>
+                            <td>18</td>
+                            <td>0</td>
+                            <td>20</td>
+                        </tr>
+                        <tr>
+                            <td>Teleća jetrica</td>
+                            <td>137</td>
+                            <td>18</td>
+                            <td>4</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>Teleća plećka</td>
+                            <td>164</td>
+                            <td>26</td>
+                            <td>0</td>
+                            <td>6</td>
+                        </tr>
+                        <tr>
+                            <td>Teleća rebarca</td>
+                            <td>177</td>
+                            <td>26</td>
+                            <td>0</td>
+                            <td>8</td>
+                        </tr>
+                        <tr>
+                            <td>Teleći but</td>
+                            <td>150</td>
+                            <td>29</td>
+                            <td>0</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>Teleći odrezak</td>
+                            <td>168</td>
+                            <td>27</td>
+                            <td>0</td>
+                            <td>7</td>
+                        </tr>
+                        <tr>
+                            <td>Teletina</td>
+                            <td>105</td>
+                            <td>21</td>
+                            <td>0</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>Zečetina</td>
+                            <td>152</td>
+                            <td>21</td>
+                            <td>0</td>
+                            <td>8</td>
+                        </tr>
+                        <tr>
+                            <td>Zimska kobasica</td>
+                            <td>455</td>
+                            <td>13</td>
+                            <td>0</td>
+                            <td>45</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="collapse multi-collapse" id="multiCollapseExample2">
+                <div class="card card-body">
+                    <table>
+                        <tbody>
+                        <tr>
+                            <th colspan="5">RIBA</th>
+                        </tr>
+                        <tr>
+                            <th>Hrana</th>
+                            <th>Kalorije</th>
+                            <th>Proteini</th>
+                            <th>Ugljeni hidrati</th>
+                            <th>Masti</th>
+                        </tr>
+                        <tr>
+                            <td>Bakalar</td>
+                            <td>76</td>
+                            <td>17</td>
+                            <td>0</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Dagnja</td>
+                            <td>66</td>
+                            <td>12</td>
+                            <td>2</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>Grgeč</td>
+                            <td>75</td>
+                            <td>15</td>
+                            <td>0</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>Haringa</td>
+                            <td>155</td>
+                            <td>13</td>
+                            <td>0</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td>Inćun</td>
+                            <td>89</td>
+                            <td>17</td>
+                            <td>0</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>Jastog</td>
+                            <td>86</td>
+                            <td>16</td>
+                            <td>1</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>Jegulja</td>
+                            <td>209</td>
+                            <td>9</td>
+                            <td>1</td>
+                            <td>18</td>
+                        </tr>
+                        <tr>
+                            <td>Kamenica (ostriga)</td>
+                            <td>49</td>
+                            <td>6</td>
+                            <td>4</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Lignja</td>
+                            <td>77</td>
+                            <td>16</td>
+                            <td>1</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>List</td>
+                            <td>83</td>
+                            <td>17</td>
+                            <td>0</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Losos</td>
+                            <td>217</td>
+                            <td>20</td>
+                            <td>0</td>
+                            <td>14</td>
+                        </tr>
+                        <tr>
+                            <td>Pastrva</td>
+                            <td>112</td>
+                            <td>18</td>
+                            <td>0</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>Račići</td>
+                            <td>106</td>
+                            <td>18</td>
+                            <td>0</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>Sardine u ulju</td>
+                            <td>240</td>
+                            <td>24</td>
+                            <td>1</td>
+                            <td>14</td>
+                        </tr>
+                        <tr>
+                            <td>Smuđ</td>
+                            <td>323</td>
+                            <td>21</td>
+                            <td>0</td>
+                            <td>16</td>
+                        </tr>
+                        <tr>
+                            <td>Skuša</td>
+                            <td>195</td>
+                            <td>19</td>
+                            <td>0</td>
+                            <td>12</td>
+                        </tr>
+                        <tr>
+                            <td>Šaran</td>
+                            <td>65</td>
+                            <td>10</td>
+                            <td>0</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>Škampi</td>
+                            <td>91</td>
+                            <td>17</td>
+                            <td>0</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>Štuka</td>
+                            <td>85</td>
+                            <td>17</td>
+                            <td>0</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>Tunj u ulju</td>
+                            <td>303</td>
+                            <td>24</td>
+                            <td>0</td>
+                            <td>21</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="collapse multi-collapse" id="multiCollapseExample3">
+                <div class="card card-body">
+                    <table>
+                        <tbody>
+                        <tr>
+                            <th colspan="5">MLEKO I MLEČNE PRERAĐEVINE</th>
+                        </tr>
+                        <tr>
+                            <th>Hrana</th>
+                            <th>Kalorije</th>
+                            <th>Proteini</th>
+                            <th>Ugljeni hidrati</th>
+                            <th>Masti</th>
+                        </tr>
+                        <tr>
+                            <td>Mekani sir</td>
+                            <td>73</td>
+                            <td>14</td>
+                            <td>4</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Polumasni mekani sir</td>
+                            <td>103</td>
+                            <td>12</td>
+                            <td>3</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>Masni tvrdi sir</td>
+                            <td>347</td>
+                            <td>20</td>
+                            <td>0</td>
+                            <td>30</td>
+                        </tr>
+                        <tr>
+                            <td>Mleko (0,9 % masti)</td>
+                            <td>40</td>
+                            <td>3</td>
+                            <td>5</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Mleko (3,2 % masti)</td>
+                            <td>66</td>
+                            <td>3</td>
+                            <td>5</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>Mleko, punomasno</td>
+                            <td>37</td>
+                            <td>4</td>
+                            <td>4</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Jogurt (obični)</td>
+                            <td>40</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>Jogurt (3.5% masti)</td>
+                            <td>71</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>Jogurt, voćni</td>
+                            <td>94</td>
+                            <td>3</td>
+                            <td>14</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>Vrhnje, kiselo</td>
+                            <td>192</td>
+                            <td>3</td>
+                            <td>3</td>
+                            <td>18</td>
+                        </tr>
+                        <tr>
+                            <td>Vrhnje, slatko</td>
+                            <td>317</td>
+                            <td>3</td>
+                            <td>2</td>
+                            <td>32</td>
+                        </tr>
+                        <tr>
+                            <td>Posni sir</td>
+                            <td>78</td>
+                            <td>12</td>
+                            <td>3</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>Puding od čokolade</td>
+                            <td>134</td>
+                            <td>4</td>
+                            <td>21</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>Sirni namazi (23% masti)</td>
+                            <td>115</td>
+                            <td>13</td>
+                            <td>6</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>Topljeni sir (45 % masti)</td>
+                            <td>386</td>
+                            <td>14</td>
+                            <td>6</td>
+                            <td>24</td>
+                        </tr>
+                        <tr>
+                            <td>Tvrdi sir (45% masti)</td>
+                            <td>372</td>
+                            <td>25</td>
+                            <td>3</td>
+                            <td>28</td>
+                        </tr>
+                        <tr>
+                            <td>Svježi kravlji sir</td>
+                            <td>72</td>
+                            <td>15</td>
+                            <td>4</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>Sir Ementaler</td>
+                            <td>383</td>
+                            <td>30</td>
+                            <td>0</td>
+                            <td>30</td>
+                        </tr>
+                        <tr>
+                            <td>Sir Gorgonzola</td>
+                            <td>360</td>
+                            <td>20</td>
+                            <td>0</td>
+                            <td>30</td>
+                        </tr>
+                        <tr>
+                            <td>Sir Gouda</td>
+                            <td>367</td>
+                            <td>27</td>
+                            <td>0</td>
+                            <td>30</td>
+                        </tr>
+                        <tr>
+                            <td>Sir smolasti</td>
+                            <td>140</td>
+                            <td>32</td>
+                            <td>0</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Sir za topljenje</td>
+                            <td>272</td>
+                            <td>16</td>
+                            <td>0</td>
+                            <td>24</td>
+                        </tr>
+                        <tr>
+                            <td>Sir Parmezan</td>
+                            <td>367</td>
+                            <td>34</td>
+                            <td>0</td>
+                            <td>34</td>
+                        </tr>
+                        <tr>
+                            <td>Sir Mozzarella</td>
+                            <td>227</td>
+                            <td>20</td>
+                            <td>0</td>
+                            <td>17</td>
+                        </tr>
+                        <tr>
+                            <td>Sir od obranog mleka</td>
+                            <td>234</td>
+                            <td>18</td>
+                            <td>1</td>
+                            <td>19</td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="collapse multi-collapse" id="multiCollapseExample4">
+                <div class="card card-body">
+                    <table>
+                        <tbody>
+                        <tr>
+                            <th colspan="5">ŽITARICE, HLEB, RIŽA, TESTENINA</th>
+                        </tr>
+                        <tr>
+                            <th>Hrana</th>
+                            <th>Kalorije</th>
+                            <th>Proteini</th>
+                            <th>Ugljeni hidrati</th>
+                            <th>Masti</th>
+                        </tr>
+                        <tr>
+                            <td>Beli hleb</td>
+                            <td>237</td>
+                            <td>7</td>
+                            <td>47</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>Crni kruh</td>
+                            <td>250</td>
+                            <td>6</td>
+                            <td>51</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Cornflakes</td>
+                            <td>355</td>
+                            <td>5</td>
+                            <td>80</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Croissant</td>
+                            <td>410</td>
+                            <td>5</td>
+                            <td>35</td>
+                            <td>25</td>
+                        </tr>
+                        <tr>
+                            <td>Dvopek</td>
+                            <td>397</td>
+                            <td>10</td>
+                            <td>77</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Griz</td>
+                            <td>370</td>
+                            <td>10</td>
+                            <td>75</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Kolači od samog testa</td>
+                            <td>314</td>
+                            <td>7</td>
+                            <td>39</td>
+                            <td>13</td>
+                        </tr>
+                        <tr>
+                            <td>Kokice</td>
+                            <td>376</td>
+                            <td>13</td>
+                            <td>72</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>Krekeri</td>
+                            <td>320</td>
+                            <td>10</td>
+                            <td>65</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>Hleb sa celim zrnima</td>
+                            <td>240</td>
+                            <td>7</td>
+                            <td>46</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Kruh za tost</td>
+                            <td>264</td>
+                            <td>8</td>
+                            <td>48</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>Kukuruzni kruh</td>
+                            <td>220</td>
+                            <td>5</td>
+                            <td>31</td>
+                            <td>9</td>
+                        </tr>
+                        <tr>
+                            <td>Kukuruzne pahuljice</td>
+                            <td>388</td>
+                            <td>6</td>
+                            <td>83</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Musli</td>
+                            <td>371</td>
+                            <td>11</td>
+                            <td>68</td>
+                            <td>6</td>
+                        </tr>
+                        <tr>
+                            <td>Pecivo pšenično</td>
+                            <td>258</td>
+                            <td>9</td>
+                            <td>54</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>Pecivo sa žitaricama</td>
+                            <td>228</td>
+                            <td>8</td>
+                            <td>42</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>Pogača, lepinja</td>
+                            <td>265</td>
+                            <td>8</td>
+                            <td>55</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Polubeli hleb</td>
+                            <td>252</td>
+                            <td>3</td>
+                            <td>52</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Prepečenci</td>
+                            <td>370</td>
+                            <td>10</td>
+                            <td>75</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>Pšenično brašno</td>
+                            <td>370</td>
+                            <td>12</td>
+                            <td>71</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>Raženi kruh</td>
+                            <td>222</td>
+                            <td>7</td>
+                            <td>47</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Raženi kruh sa žitaricama</td>
+                            <td>205</td>
+                            <td>7</td>
+                            <td>40</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Raženo brašno</td>
+                            <td>356</td>
+                            <td>9</td>
+                            <td>35</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Riža ljuštena</td>
+                            <td>368</td>
+                            <td>7</td>
+                            <td>79</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Riža neljuštena</td>
+                            <td>371</td>
+                            <td>7</td>
+                            <td>75</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>Soja u zrnu</td>
+                            <td>427</td>
+                            <td>38</td>
+                            <td>26</td>
+                            <td>19</td>
+                        </tr>
+                        <tr>
+                            <td>Sojin sir (tofu)</td>
+                            <td>72</td>
+                            <td>8</td>
+                            <td>2</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>Špageti bez jaja, kuhani</td>
+                            <td>152</td>
+                            <td>5</td>
+                            <td>32</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Tjestenina sa jajima</td>
+                            <td>390</td>
+                            <td>13</td>
+                            <td>72</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>Testo kuvano</td>
+                            <td>145</td>
+                            <td>5</td>
+                            <td>28</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Zobeni kruh</td>
+                            <td>224</td>
+                            <td>7</td>
+                            <td>45</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>Zobene pahuljice</td>
+                            <td>402</td>
+                            <td>14</td>
+                            <td>66</td>
+                            <td>7</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="collapse multi-collapse" id="multiCollapseExample5">
+                <div class="card card-body">
+                    <table>
+                        <tbody>
+                        <tr>
+                            <th colspan="5">POVRĆE</th>
+                        </tr>
+                        <tr>
+                            <th>Hrana</th>
+                            <th>Kalorije</th>
+                            <th>Proteini</th>
+                            <th>Ugljeni hidrati</th>
+                            <th>Masti</th>
+                        </tr>
+                        <tr>
+                            <td>Artičoke</td>
+                            <td>23</td>
+                            <td>1</td>
+                            <td>5</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>Brokula</td>
+                            <td>33</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>Cikla</td>
+                            <td>37</td>
+                            <td>2</td>
+                            <td>8</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>Cvjetača</td>
+                            <td>28</td>
+                            <td>2</td>
+                            <td>4</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>Celer</td>
+                            <td>38</td>
+                            <td>2</td>
+                            <td>7</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>Grah</td>
+                            <td>110</td>
+                            <td>7</td>
+                            <td>21</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Grašak</td>
+                            <td>93</td>
+                            <td>7</td>
+                            <td>14</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Kelj</td>
+                            <td>46</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Krastavci</td>
+                            <td>10</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>Krastavci, kiseli</td>
+                            <td>14</td>
+                            <td>1</td>
+                            <td>3</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>Koraba</td>
+                            <td>24</td>
+                            <td>2</td>
+                            <td>4</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>Kukuruz</td>
+                            <td>110</td>
+                            <td>4</td>
+                            <td>22</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>Kupus, kiseli</td>
+                            <td>26</td>
+                            <td>2</td>
+                            <td>4</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>Kupus, slatki</td>
+                            <td>52</td>
+                            <td>4</td>
+                            <td>7</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Leća</td>
+                            <td>100</td>
+                            <td>8</td>
+                            <td>18</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Luk</td>
+                            <td>42</td>
+                            <td>1</td>
+                            <td>9</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>Mahune</td>
+                            <td>27</td>
+                            <td>2</td>
+                            <td>5</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>Matovilac</td>
+                            <td>15</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>Masline</td>
+                            <td>140</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td>Mrkva</td>
+                            <td>35</td>
+                            <td>1</td>
+                            <td>7</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>Paprika</td>
+                            <td>28</td>
+                            <td>1</td>
+                            <td>5</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>Patlidžan</td>
+                            <td>26</td>
+                            <td>1</td>
+                            <td>5</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>Peršin</td>
+                            <td>0</td>
+                            <td>5</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>Poriluk</td>
+                            <td>38</td>
+                            <td>2</td>
+                            <td>6</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>Prokulice</td>
+                            <td>30</td>
+                            <td>4</td>
+                            <td>4</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Rajčica</td>
+                            <td>19</td>
+                            <td>1</td>
+                            <td>3</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>Rotkvice</td>
+                            <td>13</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>Šampinjoni</td>
+                            <td>24</td>
+                            <td>3</td>
+                            <td>3</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>Šparoge</td>
+                            <td>20</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>Špinat</td>
+                            <td>23</td>
+                            <td>2</td>
+                            <td>2</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>Tikvice</td>
+                            <td>18</td>
+                            <td>2</td>
+                            <td>2</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Vlasac</td>
+                            <td>0</td>
+                            <td>5</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>Zelena salata</td>
+                            <td>14</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>Zelje</td>
+                            <td>25</td>
+                            <td>1</td>
+                            <td>4</td>
+                            <td>0</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="collapse multi-collapse" id="multiCollapseExample6">
+                <div class="card card-body">
+                    <table>
+                        <table>
+                            <tbody>
+                            <tr>
+                                <th colspan="5">VOĆE</th>
+                            </tr>
+                            <tr>
+                                <th>Hrana</th>
+                                <th>Kalorije</th>
+                                <th>Proteini</th>
+                                <th>Ugljeni hidrati</th>
+                                <th>Masti</th>
+                            </tr>
+                            <tr>
+                                <td>Ananas</td>
+                                <td>56</td>
+                                <td>0</td>
+                                <td>13</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>Avokado</td>
+                                <td>221</td>
+                                <td>2</td>
+                                <td>0</td>
+                                <td>24</td>
+                            </tr>
+                            <tr>
+                                <td>Banana</td>
+                                <td>99</td>
+                                <td>1</td>
+                                <td>23</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>Borovnica</td>
+                                <td>62</td>
+                                <td>1</td>
+                                <td>14</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>Breskva</td>
+                                <td>46</td>
+                                <td>1</td>
+                                <td>11</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>Dinja</td>
+                                <td>54</td>
+                                <td>1</td>
+                                <td>5</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>Grožđe</td>
+                                <td>70</td>
+                                <td>1</td>
+                                <td>16</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>Grejp</td>
+                                <td>42</td>
+                                <td>1</td>
+                                <td>10</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>Jabuka</td>
+                                <td>52</td>
+                                <td>0</td>
+                                <td>12</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>Jagode</td>
+                                <td>36</td>
+                                <td>1</td>
+                                <td>7</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>Kikiriki</td>
+                                <td>603</td>
+                                <td>23</td>
+                                <td>13</td>
+                                <td>53</td>
+                            </tr>
+                            <tr>
+                                <td>Kivi</td>
+                                <td>55</td>
+                                <td>1</td>
+                                <td>11</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>Kupine</td>
+                                <td>44</td>
+                                <td>1</td>
+                                <td>6</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>Kruška</td>
+                                <td>55</td>
+                                <td>0</td>
+                                <td>12</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>Lubenica</td>
+                                <td>24</td>
+                                <td>1</td>
+                                <td>5</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>Maline</td>
+                                <td>40</td>
+                                <td>1</td>
+                                <td>8</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>Mandarine</td>
+                                <td>48</td>
+                                <td>1</td>
+                                <td>11</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>Marelica</td>
+                                <td>54</td>
+                                <td>1</td>
+                                <td>12</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>Naranča</td>
+                                <td>54</td>
+                                <td>1</td>
+                                <td>9</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>Nektarina</td>
+                                <td>53</td>
+                                <td>1</td>
+                                <td>13</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>Orasi</td>
+                                <td>670</td>
+                                <td>13</td>
+                                <td>13</td>
+                                <td>63</td>
+                            </tr>
+                            <tr>
+                                <td>Ribizl (crveni)</td>
+                                <td>45</td>
+                                <td>1</td>
+                                <td>10</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>Ribizl (crni)</td>
+                                <td>63</td>
+                                <td>1</td>
+                                <td>14</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>Suho voće</td>
+                                <td>252</td>
+                                <td>3</td>
+                                <td>56</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>Šljiva</td>
+                                <td>58</td>
+                                <td>1</td>
+                                <td>14</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>Trešnje</td>
+                                <td>57</td>
+                                <td>1</td>
+                                <td>13</td>
+                                <td>0</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
